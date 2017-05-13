@@ -1,69 +1,69 @@
 'use strict';
 
-var bitcore = module.exports;
+var radium = module.exports;
 
 // module information
-bitcore.version = 'v' + require('./package.json').version;
-bitcore.versionGuard = function(version) {
+radium.version = 'v' + require('./package.json').version;
+radium.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of bitcore-lib found. ' +
-      'Please make sure to require bitcore-lib and check that submodules do' +
-      ' not also include their own bitcore-lib dependency.';
+    var message = 'More than one instance of radium found. ' +
+      'Please make sure to require radium and check that submodules do' +
+      ' not also include their own radium dependency.';
     throw new Error(message);
   }
 };
-bitcore.versionGuard(global._bitcore);
-global._bitcore = bitcore.version;
+radium.versionGuard(global._radium);
+global._radium = radium.version;
 
 // crypto
-bitcore.crypto = {};
-bitcore.crypto.BN = require('./lib/crypto/bn');
-bitcore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-bitcore.crypto.Hash = require('./lib/crypto/hash');
-bitcore.crypto.Random = require('./lib/crypto/random');
-bitcore.crypto.Point = require('./lib/crypto/point');
-bitcore.crypto.Signature = require('./lib/crypto/signature');
+radium.crypto = {};
+radium.crypto.BN = require('./lib/crypto/bn');
+radium.crypto.ECDSA = require('./lib/crypto/ecdsa');
+radium.crypto.Hash = require('./lib/crypto/hash');
+radium.crypto.Random = require('./lib/crypto/random');
+radium.crypto.Point = require('./lib/crypto/point');
+radium.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
-bitcore.encoding = {};
-bitcore.encoding.Base58 = require('./lib/encoding/base58');
-bitcore.encoding.Base58Check = require('./lib/encoding/base58check');
-bitcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-bitcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-bitcore.encoding.Varint = require('./lib/encoding/varint');
+radium.encoding = {};
+radium.encoding.Base58 = require('./lib/encoding/base58');
+radium.encoding.Base58Check = require('./lib/encoding/base58check');
+radium.encoding.BufferReader = require('./lib/encoding/bufferreader');
+radium.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+radium.encoding.Varint = require('./lib/encoding/varint');
 
 // utilities
-bitcore.util = {};
-bitcore.util.buffer = require('./lib/util/buffer');
-bitcore.util.js = require('./lib/util/js');
-bitcore.util.preconditions = require('./lib/util/preconditions');
+radium.util = {};
+radium.util.buffer = require('./lib/util/buffer');
+radium.util.js = require('./lib/util/js');
+radium.util.preconditions = require('./lib/util/preconditions');
 
 // errors thrown by the library
-bitcore.errors = require('./lib/errors');
+radium.errors = require('./lib/errors');
 
-// main bitcoin library
-bitcore.Address = require('./lib/address');
-bitcore.Block = require('./lib/block');
-bitcore.MerkleBlock = require('./lib/block/merkleblock');
-bitcore.BlockHeader = require('./lib/block/blockheader');
-bitcore.HDPrivateKey = require('./lib/hdprivatekey.js');
-bitcore.HDPublicKey = require('./lib/hdpublickey.js');
-bitcore.Networks = require('./lib/networks');
-bitcore.Opcode = require('./lib/opcode');
-bitcore.PrivateKey = require('./lib/privatekey');
-bitcore.PublicKey = require('./lib/publickey');
-bitcore.Script = require('./lib/script');
-bitcore.Transaction = require('./lib/transaction');
-bitcore.URI = require('./lib/uri');
-bitcore.Unit = require('./lib/unit');
+// main radium library
+radium.Address = require('./lib/address');
+radium.Block = require('./lib/block');
+radium.MerkleBlock = require('./lib/block/merkleblock');
+radium.BlockHeader = require('./lib/block/blockheader');
+radium.HDPrivateKey = require('./lib/hdprivatekey.js');
+radium.HDPublicKey = require('./lib/hdpublickey.js');
+radium.Networks = require('./lib/networks');
+radium.Opcode = require('./lib/opcode');
+radium.PrivateKey = require('./lib/privatekey');
+radium.PublicKey = require('./lib/publickey');
+radium.Script = require('./lib/script');
+radium.Transaction = require('./lib/transaction');
+radium.URI = require('./lib/uri');
+radium.Unit = require('./lib/unit');
 
 // dependencies, subject to change
-bitcore.deps = {};
-bitcore.deps.bnjs = require('bn.js');
-bitcore.deps.bs58 = require('bs58');
-bitcore.deps.Buffer = Buffer;
-bitcore.deps.elliptic = require('elliptic');
-bitcore.deps._ = require('lodash');
+radium.deps = {};
+radium.deps.bnjs = require('bn.js');
+radium.deps.bs58 = require('bs58');
+radium.deps.Buffer = Buffer;
+radium.deps.elliptic = require('elliptic');
+radium.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
-bitcore.Transaction.sighash = require('./lib/transaction/sighash');
+radium.Transaction.sighash = require('./lib/transaction/sighash');

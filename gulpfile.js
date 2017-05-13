@@ -1,5 +1,5 @@
 
 
-var bitcoreTasks = require('bitcore-build');
+var radiumTasks = require('radium-build');
 
-bitcoreTasks('lib');
+radiumTasks('lib');

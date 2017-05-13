@@ -1,8 +1,8 @@
 {
-  "name": "bitcore-lib",
+  "name": "radium",
   "version": "0.14.0",
-  "description": "A pure and powerful JavaScript Bitcoin library.",
-  "author": "BitPay <dev@bitpay.com>",
+  "description": "A pure and powerful JavaScript Radium library.",
+  "author": "Radium Core <support@radiumcore.org>",
   "main": "index.js",
   "scripts": {
     "lint": "gulp lint",
@@ -58,6 +58,7 @@
   ],
   "keywords": [
     "bitcoin",
+    "radium",
     "transaction",
     "address",
     "p2p",
@@ -74,7 +75,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpay/bitcore-lib.git"
+    "url": "https://github.com/RadiumCore/radium-lib.git"
   },
   "browser": {
     "request": "browser-request"
@@ -88,7 +89,7 @@
     "lodash": "=3.10.1"
   },
   "devDependencies": {
-    "bitcore-build": "bitpay/bitcore-build",
+    "radium-build": "RadiumCore/radium-build",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",

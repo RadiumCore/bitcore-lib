@@ -1,10 +1,10 @@
-# Bitcore v0.14
+# Radium v0.14
 
 ## Principles
 
-Bitcoin is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin network allows for highly resilient bitcoin infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin apps and services. Bitcore provides a reliable API for JavaScript apps that need to interface with Bitcoin.
+radium is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the radium network allows for highly resilient radium infrastructure, and the developer community needs reliable, open-source tools to implement radium apps and services. Radium provides a reliable API for JavaScript apps that need to interface with radium.
 
-To get started, just `npm install bitcore` or `bower install bitcore`.
+To get started, just `npm install radium` or `bower install radium`.
 
 # Documentation Index
 
@@ -17,10 +17,10 @@ To get started, just `npm install bitcore` or `bower install bitcore`.
 
 ## Payment Handling
 * [Using Different Units](unit.md)
-* [Acknowledging and Requesting Payments: Bitcoin URIs](uri.md)
+* [Acknowledging and Requesting Payments: radium URIs](uri.md)
 * [The Transaction Class](transaction.md)
 
-## Bitcoin Internals
+## Radium Internals
 * [Scripts](script.md)
 * [Block](block.md)
 
@@ -35,25 +35,25 @@ To get started, just `npm install bitcore` or `bower install bitcore`.
 
 Some functionality is implemented as a module that can be installed separately:
 
-* [Payment Protocol Support](https://github.com/bitpay/bitcore-payment-protocol)
-* [Peer to Peer Networking](https://github.com/bitpay/bitcore-p2p)
-* [Bitcoin Core JSON-RPC](https://github.com/bitpay/bitcoind-rpc)
-* [Payment Channels](https://github.com/bitpay/bitcore-channel)
-* [Mnemonics](https://github.com/bitpay/bitcore-mnemonic)
-* [Elliptical Curve Integrated Encryption Scheme](https://github.com/bitpay/bitcore-ecies)
-* [Blockchain Explorers](https://github.com/bitpay/bitcore-explorers)
-* [Signed Messages](https://github.com/bitpay/bitcore-message)
+* [Payment Protocol Support](https://github.com/bitpay/radium-payment-protocol)
+* [Peer to Peer Networking](https://github.com/bitpay/radium-p2p)
+* [Radium Core JSON-RPC](https://github.com/bitpay/radiumd-rpc)
+* [Payment Channels](https://github.com/bitpay/radium-channel)
+* [Mnemonics](https://github.com/bitpay/radium-mnemonic)
+* [Elliptical Curve Integrated Encryption Scheme](https://github.com/bitpay/radium-ecies)
+* [Blockchain Explorers](https://github.com/bitpay/radium-explorers)
+* [Signed Messages](https://github.com/bitpay/radium-message)
 
 # Examples
 
 ## Create and Save a Private Key
 
 ```javascript
-var privateKey = new bitcore.PrivateKey();
+var privateKey = new radium.PrivateKey();
 
 var exported = privateKey.toWIF();
 // e.g. L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m
-var imported = bitcore.PrivateKey.fromWIF(exported);
+var imported = radium.PrivateKey.fromWIF(exported);
 var hexa = privateKey.toString();
 // e.g. 'b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a'
 ```
@@ -68,17 +68,17 @@ var address = privateKey.toAddress();
 
 ```javascript
 // Build a 2-of-3 address from public keys
-var p2shAddress = new bitcore.Address([publicKey1, publicKey2, publicKey3], 2);
+var p2shAddress = new radium.Address([publicKey1, publicKey2, publicKey3], 2);
 ```
 
 ## Request a Payment
 
 ```javascript
 var paymentInfo = {
-  address: '1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx',
+  address: 'XoKdgvpWbKKBZETRF2CTEwhwoiGnasrJoU',
   amount: 120000 //satoshis
 };
-var uri = new bitcore.URI(paymentInfo).toString();
+var uri = new radium.URI(paymentInfo).toString();
 ```
 
 ## Create a Transaction

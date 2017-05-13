@@ -2,10 +2,10 @@
 
 var should = require('chai').should();
 
-var bitcore = require('../..');
-var errors = bitcore.errors;
-var $ = bitcore.util.preconditions;
-var PrivateKey = bitcore.PrivateKey;
+var radium = require('../..');
+var errors = radium.errors;
+var $ = radium.util.preconditions;
+var PrivateKey = radium.PrivateKey;
 
 describe('preconditions', function() {
 

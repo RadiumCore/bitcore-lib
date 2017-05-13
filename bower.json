@@ -1,20 +1,18 @@
 {
-  "name": "bitcore-lib",
-  "main": "./bitcore-lib.min.js",
+  "name": "radium",
+  "main": "./radium.min.js",
   "version": "0.13.19",
-  "homepage": "http://bitcore.io",
+  "homepage": "https://radiumcore.org",
   "authors": [
     "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your bitcoin project.",
+  "description": "A pure, powerful core for your radium project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
     "bitcoin",
-    "bitcore",
-    "btc",
-    "satoshi"
+    "radium"
   ],
   "license": "MIT",
   "ignore": [

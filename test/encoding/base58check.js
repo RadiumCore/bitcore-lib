@@ -1,9 +1,9 @@
 'use strict';
 
 var should = require('chai').should();
-var bitcore = require('../..');
-var Base58Check = bitcore.encoding.Base58Check;
-var Base58 = bitcore.encoding.Base58;
+var radium = require('../..');
+var Base58Check = radium.encoding.Base58Check;
+var Base58 = radium.encoding.Base58;
 
 describe('Base58Check', function() {
   var buf = new Buffer([0, 1, 2, 3, 253, 254, 255]);

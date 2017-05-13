@@ -1,10 +1,10 @@
 'use strict';
 
 var should = require('chai').should();
-var bitcore = require('../..');
-var BufferWriter = bitcore.encoding.BufferWriter;
-var BufferReader = bitcore.encoding.BufferReader;
-var BN = bitcore.crypto.BN;
+var radium = require('../..');
+var BufferWriter = radium.encoding.BufferWriter;
+var BufferReader = radium.encoding.BufferReader;
+var BN = radium.crypto.BN;
 
 describe('BufferReader', function() {
 
@@ -190,7 +190,7 @@ describe('BufferReader', function() {
       br.readUInt64LEBN().toNumber().should.equal(1);
     });
 
-    it('should return 10BTC', function() {
+    it('should return 10RADS', function() {
       var tenbtc = 10 * 1e8;
       var tenbtcBuffer = new Buffer('00ca9a3b00000000', 'hex');
       var br = new BufferReader(tenbtcBuffer);

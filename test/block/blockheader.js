@@ -1,11 +1,11 @@
 'use strict';
 
-var bitcore = require('../..');
+var radium = require('../..');
 var BN = require('../../lib/crypto/bn');
-var BufferReader = bitcore.encoding.BufferReader;
-var BufferWriter = bitcore.encoding.BufferWriter;
+var BufferReader = radium.encoding.BufferReader;
+var BufferWriter = radium.encoding.BufferWriter;
 
-var BlockHeader = bitcore.BlockHeader;
+var BlockHeader = radium.BlockHeader;
 var fs = require('fs');
 var should = require('chai').should();
 
