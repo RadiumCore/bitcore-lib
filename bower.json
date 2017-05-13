@@ -1,5 +1,5 @@
 {
-  "name": "radium",
+  "name": "radium-lib",
   "main": "./radium.min.js",
   "version": "0.13.19",
   "homepage": "https://radiumcore.org",

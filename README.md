@@ -14,11 +14,11 @@ Radium is a powerful new peer-to-peer platform for the next generation of financ
 ## Get Started
 
 ```
-npm install radium
+npm install radium-lib
 ```
 
 ```
-bower install radium
+bower install radium-lib
 ```
 
 ## Documentation

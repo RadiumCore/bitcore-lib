@@ -4,7 +4,7 @@ Radium and most official submodules work in the browser, thanks to [browserify](
 The easiest and recommended way to use them, is via [Bower](http://bower.io/), a browser package manager, and get the release bundles. For example, when building an app that uses `bitcore` and `bitcore-mnemonic`, you do:
 
 ```sh
-bower install radium
+bower install radium-lib
 bower install bitcore-mnemonic
 ```
 
@@ -16,7 +16,7 @@ You can also use a `bower.json` file to store the dependencies of your project:
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "radium": "^0.13.7",
+    "radium-lib": "^0.13.7",
     "bitcore-mnemonic": "^1.0.1"
   }
 }
