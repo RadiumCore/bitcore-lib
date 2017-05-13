@@ -1,7 +1,7 @@
 Radium JS Library
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/bitcore-lib.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-lib)
+[![NPM Package](https://img.shields.io/npm/v/bitcore-lib.svg?style=flat-square)](https://www.npmjs.org/package/radium-lib)
 [![Build Status](https://img.shields.io/travis/radium/radium-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/radium/radium-lib)
 [![Coverage Status](https://img.shields.io/coveralls/radium/radium-lib.svg?style=flat-square)](https://coveralls.io/r/radium/radium-lib)
 
@@ -15,10 +15,6 @@ Radium is a powerful new peer-to-peer platform for the next generation of financ
 
 ```
 npm install radium-lib
-```
-
-```
-bower install radium-lib
 ```
 
 ## Documentation
